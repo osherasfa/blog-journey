@@ -3,11 +3,15 @@
 This is a simple blog site that import posts from a local data object. The site incorporates a dark and light mode feature, a hero section displaying random posts upon each page load, an "About Me" page, and individual post pages with random posts displayed at the bottom. The site is built using JavaScript (JS), HTML, and CSS.
 
 ## Table of Contents
+- [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+
+## Demo
+Check out the live demo of the project [here](https://blogjourney.netlify.app/).
 
 ## Features
 
