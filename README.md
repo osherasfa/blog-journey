@@ -15,13 +15,15 @@ Check out the live demo of the project [here](https://blogjourney.netlify.app/).
 
 ## Features
 
-1. **Dark/Light Mode**: The site offers both dark and light mode options, providing a personalized viewing experience based on your preference.
+1. **Single Page Application (SPA)**: The site utilizes JavaScript render methods to create a seamless user experience where you can navigate between links and posts without the need to reload the entire site.
 
-2. **Hero Section**: Upon each page load, the hero section displays random posts from your blog, creating a dynamic and engaging front page.
+2. **Dark/Light Mode**: The site offers both dark and light mode options, providing a personalized viewing experience based on your preference.
 
-3. **About Me Page**: The blog includes an "About Me" page where I share information about myself, my interests, and my blog's purpose.
+3. **Hero Section**: Upon each page load, the hero section displays random posts from your blog, creating a dynamic and engaging front page.
 
-4. **Post Pages**: Individual post pages showcase blog content, and at the bottom of each post page, random posts are displayed to encourage further exploration.
+4. **About Me Page**: The blog includes an "About Me" page where I share information about myself, my interests, and my blog's purpose.
+
+5. **Post Pages**: Individual post pages showcase blog content, and at the bottom of each post page, random posts are displayed to encourage further exploration.
 
 ## Technologies Used
 
