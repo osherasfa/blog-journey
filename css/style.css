@@ -1,0 +1,242 @@
+:root {
+  --primary-color: White; 
+  --secondary-color: #e5e5e595; 
+  --tertiary-color: #f8f8f8;
+  --font-color: black; 
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    transition: all .2s ease-in-out;
+    color: var(--font-color);
+    background-color: var(--tertiary-color);
+    position: relative;
+}
+
+h1, h4, p{ margin: 0px; }
+.title{ margin-block: .5em .3em;}
+nav > *, .post, #posts > h4, #hero { cursor: pointer; }
+#posts, #logo, #home, #aboutme, #hero { user-select: none;}
+
+/* ---------------- Navbar ----------------*/
+nav {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+  gap: 1.5em;
+  padding: 1em;
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
+#container { padding-top: 3.5625em;} 
+nav > h1 { font-size: 0.7em; }
+
+.fa-solid { transition: all .2s ease-in-out; }
+.fa-solid:active { transform: scale(.8); }
+.fa-sun { color: white; }
+
+#logo, #home, #aboutme {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+#logo {
+  display: flex;
+  margin-right: auto;
+  gap: .2em;
+}
+#logo > img { height: 1.56em; }
+#logo h1 { font-size: .84em; }
+
+
+#logo .subheading {
+  display: block;
+  font-weight: lighter;
+  background: #000315;
+  background: linear-gradient(
+    90deg,
+    hsl(358deg 97% 31%) 0%,
+    hsl(351deg 96% 41%) 20%,
+    hsl(3deg 97% 44%) 40%,
+    hsl(21deg 97% 46%) 60%,
+    hsl(36deg 96% 50%) 80%,
+    hsl(43deg 100% 52%) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: .635em;
+}
+
+/* ---------------- Hero ----------------*/
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+
+  background-size: cover;
+  background-position: center;
+
+  padding: 2em;
+  height: 18rem;
+  font-size: 1.0625em;
+}
+#hero:hover { animation: zoomin .5s normal forwards; }
+#hero:not(:hover) { animation: zoomout .5s normal forwards; }
+
+@keyframes zoomin {
+  0% { background-size: 100%; }
+  100% { background-size: 120%; }
+}
+
+@keyframes zoomout {
+  0% { background-size: 120%; }
+  100% { background-size: 100%; }
+}
+
+
+#hero > * { 
+  background-color: var(--secondary-color);
+  width: fit-content;
+  max-width: 35em;
+}
+
+/* ---------------- Posts ----------------*/
+#posts {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, max(31.25em, (97%/3))), 1fr));
+
+  gap: 2.5625em 1.625em;
+  padding: 1.25em;
+  max-width: 2000px;
+}
+
+#posts > h4 {
+  cursor: pointer;
+  margin: 0 auto;
+  text-decoration: underline;
+  grid-column: 1 / -1;
+}
+
+.post { 
+  background-color: var(--secondary-color);
+  transition: all .2s ease-in-out;
+  border-radius: 1em;
+  overflow: hidden;
+}
+.post:hover { transform: scale(1.01); }
+.post:active { transform: scale(0.99); }
+.post > * { width: 100%;}
+.post > .date { margin: 1em 0;}
+.hidden { display: none; }
+.post > img {
+  height: 15em;
+  object-fit: cover;
+}
+
+.post > .brief { padding-bottom: 2em; }
+.post > :not(:first-child) { 
+  padding-inline: 2rem;
+  box-sizing: border-box;
+}
+
+/* ---------------- Article ----------------*/
+.article {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1.25em;
+  max-width: 100rem;
+  align-items: center;
+}
+
+.article > *:not(img) {
+  width: 90%;
+}
+
+.article > img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  margin: 2.1875em auto;
+  object-fit: cover;
+}
+#recent { text-align: center; text-decoration: underline; }
+
+/* ---------------- Aboutme ----------------*/
+#aboutme-page {
+  margin: 0 auto;
+  padding: 1.5em;
+  max-width: 68em;
+}
+
+#headline > img {
+  width: 11.375rem;
+}
+
+#headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+#headline > div > h1 { margin-bottom: .5em; }
+#details { margin-top: 2em; }
+
+/* ---------------- Footer ----------------*/
+footer {
+  text-align: center;
+  background-color: #202020;
+  height: 6.5625em;
+  box-sizing: border-box;
+  padding-top: 2.3125em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 1em; 
+}
+#container { padding-bottom: 6.5625em;} /* Footer's size */
+
+footer > p { 
+  color: #ECECEC;
+  font-size: .9em; 
+}
+footer > h4 { color: #D7D7D7;}
+
+@media (min-width: 800px){
+  .date, .brief, .content { font-size: 1.5em; }
+  .title { font-size: 2em; }
+
+  /* ---------------- Navbar ----------------*/
+  nav {
+    font-size: 1.5rem;
+    padding-inline: 2em;
+  }
+  #container { padding-top: 5.375em;}
+
+  /* ---------------- Hero ----------------*/
+  #hero {
+    height: 30.5rem;
+    padding: 5em;
+  }
+
+  /* ---------------- Posts ----------------*/
+  #posts { padding: 3.125em; }
+  .post > img { height: 26em; }
+
+  /* ---------------- Article ----------------*/
+  .article > img { margin: 2.1875em auto; }
+
+  /* ---------------- Aboutme ----------------*/
+  #aboutme-page { font-size: 1.5rem; }
+  #headline { flex-direction: row; }
+}
